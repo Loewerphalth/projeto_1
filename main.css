@@ -124,6 +124,13 @@ video {
     margin-bottom: 20px;
 }
 
+.mensagemSucesso {
+    padding: 8px;
+    background-color: rgba(217, 217, 217, 0.3);
+    color: aliceblue;
+    font-weight: 500;
+}
+
 #mensagem {
     display: flex;
     flex-direction: column;
