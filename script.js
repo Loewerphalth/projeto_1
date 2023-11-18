@@ -11,3 +11,32 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         });
     });
 });
+
+const form = document.getElementById("mensagem");
+
+function validaNome(nomeCompleto) {
+    const nomeComoArray = nomeCompleto.split(" ");
+    return nomeComoArray.length >= 2;
+}
+
+form.addEventListener("submit", function (e) {
+    let formEValido = false;
+    e.preventDefault();
+
+    const nomeUsuario = document.getElementById("nomeUsuario");
+    const emailUsuario = document.getElementById("emailUsuario");
+    const telUsuario = document.getElementById("telUsuario");
+
+    formEValido = validaNome(nomeUsuario.value);
+    if (formEValido) {
+        alert("Muito Obrigado pela sua mensagem!");
+
+        nomeUsuario.value = "";
+        emailUsuario.value = "";
+        telUsuario.value = "";
+    } else {
+        alert("Por Favor. Insira o nome completo!");
+    }
+});
+
+console.log(form);
