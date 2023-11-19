@@ -29,8 +29,13 @@ form.addEventListener("submit", function (e) {
     const mensage = document.getElementById("mensage");
 
     formEValido = validaNome(nomeUsuario.value);
+
+    const mesangemComplet = document.querySelector("#contact p");
+
     if (formEValido) {
-        alert("Muito Obrigado pela sua mensagem!");
+        // alert("Muito Obrigado pela sua mensagem!");
+
+        mesangemComplet.style.visibility = "visible";
 
         nomeUsuario.value = "";
         emailUsuario.value = "";
